@@ -6,7 +6,7 @@
     %tr
       %th= link_to "Movie", :sort => "title"
       %th Rating
-      %th= link_to "Release Date".hilite, :sort => "release_date"
+      %th{:class=>("hilite" if @sort_column == "release_date")}= link_to "Release Date", :sort => "release_date"
       %th More Info
   %tbody
     - @movies.each do |movie|
